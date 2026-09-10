@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Withdrawal History - RewardHub</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            RewardHub
+        </div>
+
+        <div class="nav-links">
+
+            <a href="{{ url_for('dashboard') }}">
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('earn') }}">
+                Earn
+            </a>
+
+            <a href="{{ url_for('rewards') }}">
+                Rewards
+            </a>
+
+            <a href="{{ url_for('logout') }}">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Withdrawal History
+                </h1>
+
+                <p>
+                    Track your reward redemptions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <section class="dashboard-section">
+
+            {% if withdrawals %}
+
+                <div class="transaction-list">
+
+                    {% for withdrawal in withdrawals %}
+
+                        <div class="transaction">
+
+                            <div>
+
+                                <strong>
+                                    {{ withdrawal["reward_name"] }}
+                                </strong>
+
+                                <p>
+                                    {{ withdrawal["created_at"] }}
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    ₦{{ withdrawal["cash_value"] }}
+                                </strong>
+
+                                <p class="withdrawal-status">
+                                    {{ withdrawal["status"] }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+                <div class="empty-transactions">
+
+                    <p>
+                        You have not made any withdrawals yet.
+                    </p>
+
+                    <a href="{{ url_for('rewards') }}"
+                       class="button">
+
+                        View Rewards
+
+                    </a>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 RewardHub. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

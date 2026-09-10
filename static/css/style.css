@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    color: #222;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.signup {
+    padding: 10px 18px;
+    background: #4f46e5;
+    color: white !important;
+    border-radius: 8px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #4f46e5;
+    color: white;
+}
+
+.secondary-btn {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+
+/* FEATURES */
+
+.features {
+    padding: 70px 8%;
+    background: white;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.feature-card {
+    background: #f7f8fc;
+    padding: 30px;
+    width: 280px;
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+
+
+
+/* AUTH PAGES */
+
+.auth-container {
+    width: 400px;
+    max-width: 90%;
+
+    margin: 80px auto;
+
+    background: white;
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 10px;
+}
+
+.auth-container p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input {
+    padding: 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.auth-container button {
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.auth-container a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* DASHBOARD */
+
+.dashboard {
+    width: 84%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: #666;
+}
+
+
+/* BALANCE */
+
+.balance-card {
+    background: #4f46e5;
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    margin-bottom: 50px;
+
+    width: 100%;
+}
+
+.balance-card p {
+    font-size: 18px;
+}
+
+.balance-card h2 {
+    font-size: 45px;
+    margin: 15px 0 5px;
+}
+
+.balance-card span {
+    opacity: 0.8;
+}
+
+
+/* DASHBOARD SECTIONS */
+
+.dashboard-section {
+    margin-bottom: 50px;
+}
+
+.dashboard-section h2 {
+    margin-bottom: 25px;
+}
+
+
+/* REWARD BOX */
+
+.reward-box {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.reward-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.reward-box a,
+.feature-card a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* TASKS */
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.task-card h2 {
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    color: #666;
+}
+
+.task-reward {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 120px;
+}
+
+.task-reward strong {
+    font-size: 24px;
+}
+
+.task-reward span {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.task-reward a {
+    background: #4f46e5;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 7px;
+}
+
+
+/* TRANSACTIONS */
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.transaction {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.transaction strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.transaction small {
+    color: #888;
+}
+
+.points-earned {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.empty-transactions {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    color: #777;
+}
+
+/* REWARDS */
+
+.reward-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.reward-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.reward-card h2 {
+    margin-bottom: 15px;
+}
+
+.cash-value {
+    font-size: 35px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.reward-card p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.reward-card button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    background: #ddd;
+    color: #777;
+}
+
+.withdrawal-status {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 5px;
+}

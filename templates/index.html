@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RewardHub</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">RewardHub</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Earn</a>
+            <a href="#">Rewards</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}" class="signup">Sign Up</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Earn rewards for doing simple tasks.</h1>
+
+            <p>
+                Complete surveys, quizzes, offers and other activities
+                to earn points and redeem your rewards.
+            </p>
+
+            <div class="buttons">
+                <a href="{{ url_for('register') }}" class="primary-btn">
+                    Start Earning
+                </a>
+                <a href="#" class="secondary-btn">How It Works</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="features">
+
+        <h2>Ways to Earn</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h3>📝 Surveys</h3>
+                <p>Share your opinions and earn points.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Tasks</h3>
+                <p>Complete simple tasks and get rewarded.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎁 Rewards</h3>
+                <p>Redeem your points for available rewards.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 RewardHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

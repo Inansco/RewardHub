@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rewards - RewardHub</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            RewardHub
+        </div>
+
+        <div class="nav-links">
+
+            <a href="{{ url_for('dashboard') }}">
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('earn') }}">
+                Earn
+            </a>
+
+            <a href="{{ url_for('rewards') }}">
+                Rewards
+            </a>
+
+            <a href="{{ url_for('logout') }}">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <h1>Rewards 🎁</h1>
+
+            <p>
+                Your balance:
+                <strong>{{ user["points"] }} points</strong>
+            </p>
+
+        </div>
+
+
+        <div class="reward-container">
+
+            {% for reward in rewards %}
+
+            <div class="reward-card">
+
+                <h2>
+                    {{ reward["name"] }}
+                </h2>
+
+                <div class="cash-value">
+                    ₦{{ reward["cash_value"] }}
+                </div>
+
+                <p>
+                    {{ reward["points_required"] }} points required
+                </p>
+
+                {% if user["points"] >= reward["points_required"] %}
+
+                    <a
+                        href="{{ url_for('redeem', reward_id=reward['id']) }}"
+                        class="primary-btn"
+                    >
+                        Redeem
+                    </a>
+
+                {% else %}
+
+                    <button disabled>
+                        Not enough points
+                    </button>
+
+                {% endif %}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
